@@ -483,10 +483,6 @@ h3 {
   box-shadow: 0 12px 30px rgba(1, 39, 111, 0.06);
 }
 
-.hero-actions .btn.secondary[href^="https://wa.me"] {
-  display: none;
-}
-
 .btn.full {
   width: 100%;
   margin-top: 4px;
@@ -1513,7 +1509,7 @@ h3 {
   }
 }
 
-    </style>
+</style>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -1557,7 +1553,6 @@ h3 {
           <div class="hero-actions">
             <a class="btn primary" href="#request"><span class="icon icon-zap" aria-hidden="true"></span>Оставить заявку</a>
             <a class="btn secondary" href="#quote"><span class="icon icon-file-text" aria-hidden="true"></span>Получить КП</a>
-            <a class="btn secondary" href="https://wa.me/77715255152?text=%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%94%D0%93%D0%A3" target="_blank" rel="noopener"><span class="icon icon-message" aria-hidden="true"></span>Написать в WhatsApp</a>
           </div>
           <div class="hero-points" aria-label="Ключевые преимущества">
             <span><i class="icon icon-layers" aria-hidden="true"></i>4 бренда ДГУ</span>
@@ -1802,6 +1797,7 @@ h3 {
       <p>г. Астана, ул. Айнаколь 62</p>
       <a href="https://mbs-group.kz/catalog/dgu" target="_blank" rel="noopener">Основной сайт</a>
     </footer>
+
     <script>
 const header = document.querySelector("[data-header]");
 const form = document.querySelector("#leadForm");
@@ -1841,8 +1837,7 @@ form?.addEventListener("submit", (event) => {
     `Компания: ${company}`,
     `Телефон: ${phone}`,
     "Источник: рекламный лендинг"
-  ].filter(Boolean).join("
-");
+  ].filter(Boolean).join("\n");
 
   if (note) {
     note.textContent = "Заявка сформирована. Сейчас откроется WhatsApp отдела продаж.";
@@ -1852,6 +1847,6 @@ form?.addEventListener("submit", (event) => {
   window.open(`https://wa.me/77715255152?text=${encodeURIComponent(message)}`, "_blank", "noopener");
 });
 
-    </script>
+</script>
   </body>
 </html>
